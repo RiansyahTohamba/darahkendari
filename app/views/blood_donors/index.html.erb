@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Blood Donors</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Phone number</th>
+      <th>Blood type</th>
+      <th>Address</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @blood_donors.each do |blood_donor| %>
+      <tr>
+        <td><%= blood_donor.name %></td>
+        <td><%= blood_donor.phone_number %></td>
+        <td><%= blood_donor.blood_type %></td>
+        <td><%= blood_donor.address %></td>
+        <td><%= link_to 'Show', blood_donor %></td>
+        <td><%= link_to 'Edit', edit_blood_donor_path(blood_donor) %></td>
+        <td><%= link_to 'Destroy', blood_donor, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Blood Donor', new_blood_donor_path %>

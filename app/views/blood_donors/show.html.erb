@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @blood_donor.name %>
+</p>
+
+<p>
+  <strong>Phone number:</strong>
+  <%= @blood_donor.phone_number %>
+</p>
+
+<p>
+  <strong>Blood type:</strong>
+  <%= @blood_donor.blood_type %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @blood_donor.address %>
+</p>
+
+<%= link_to 'Edit', edit_blood_donor_path(@blood_donor) %> |
+<%= link_to 'Back', blood_donors_path %>
